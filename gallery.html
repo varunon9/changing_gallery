@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Thumbnail Gallery</title>
+		<link rel="stylesheet" href="gallery.css" type="text/css"/>
+		<script type="text/javascript">
+			var p=1;
+			function show(id){
+			    p=id-5;//making p as a global variable
+				document.getElementById(p).style.display='';
+				for(var i=1;i<=5;i++)
+				{
+				    if(i!=p)//hiding all the images except p
+						document.getElementById(i).style.display='none';
+				}
+			}
+			function left(){
+				p=p-1;
+				if(p==0)
+				    p=5;
+				document.getElementById(p).style.display='';
+				for(var i=1;i<=5;i++)
+				{
+				    if(i!=p)//hiding all the images except p
+						document.getElementById(i).style.display='none';
+				}
+			}
+			function right(){
+				p=p+1;
+				if(p==6)
+				    p=1;
+				document.getElementById(p).style.display='';
+				for(var i=1;i<=5;i++)
+				{
+				    if(i!=p)//hiding all the images except p
+						document.getElementById(i).style.display='none';
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="up">
+			<img src="img1.jpg" alt="" id="6" onclick="show('6');"/>
+			<img src="img2.jpg" alt="" id="7" onclick="show('7');"/>
+			<img src="img3.jpg" alt="" id="8" onclick="show('8');"/>
+			<img src="img4.jpg" alt="" id="9" onclick="show('9');"/>
+			<img src="img5.jpg" alt="" id="10" onclick="show('10');"/>
+		</div>
+		<div id="down">
+			<div id="left">
+				<img src="ribleft.png" alt="" onclick="left();"/>
+			</div>
+			<div id="right">
+				<img src="ribright.png" alt="" onclick="right();"/>
+			</div>
+			<div id="frame">
+				<img src="img1.jpg" alt="" id="1"/>
+				<img src="img2.jpg" alt="" id="2"/>
+				<img src="img3.jpg" alt="" id="3"/>
+				<img src="img4.jpg" alt="" id="4"/>
+				<img src="img5.jpg" alt="" id="5"/>
+			</div>
+			<script>
+				for(var i=2;i<=5;i++)
+					document.getElementById(i).style.display='none';//initially hiding all the images except first one.
+			</script>
+		</div>
+		<!--
+			----------------------------COMMENTS------------------------------------
+
+		-->
+	</body>
+</html>

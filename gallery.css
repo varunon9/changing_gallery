@@ -1,0 +1,56 @@
+body{
+  margin:0;
+  padding:1em;
+  overflow-y:scroll;
+  width:97%;
+}
+#up{
+  width:100%;
+  background-color:teal;
+  float:left;
+  overflow:hidden;
+}
+#up img{
+  width:15%;
+  margin-left:2%;
+  margin-top:1%;
+  max-height:125px;
+}
+#down{
+  width:100%;
+  //background-color:teal;
+  //float:left;
+  //margin:1em;
+  overflow:hidden;
+  //margin-top:10px;
+}
+#left{
+  position:absolute;
+  width:10%;
+  left:0;
+  margin-top:8em;
+}
+#left img{
+  width:100%;
+}
+#right{
+  position:absolute;
+  width:10%;
+  right:0;
+  margin-top:8em;
+}
+#right img{
+  width:100%;
+}
+#frame{
+  width:60%;
+  overflow:hidden;
+  position:absolute;
+  left:20%;
+  border:solid;
+  margin-top:5%;
+}
+#frame img{
+  width:100%;
+  max-height:355px;
+}
